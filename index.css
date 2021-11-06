@@ -10,7 +10,9 @@ body {
 
 .topnav {
     overflow: hidden;
-    background-color: rgb(20, 129, 192)
+    background-color: rgb(20, 129, 192);
+    z-index: 2;
+    position: sticky;
 }
 
 .topnav a {
@@ -107,4 +109,39 @@ a.active:hover {
     .topnav a#logout {
         float: right;
     }
+}
+
+label {}
+
+#document_download {
+    background-color: rgb(20, 129, 192);
+    color: white;
+}
+
+#doc_info {
+    background-color: rgb(20, 129, 192);
+}
+
+.divider {
+    display: table;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    margin: 40px auto;
+}
+
+.divider span {
+    display: table-cell;
+    position: relative;
+}
+
+.divider span:first-child,
+.divider span:last-child {
+    width: 50%;
+    top: 13px;
+    background-size: 100% 2px;
+    background-position: 0 0, 0 100%;
+    background-repeat: no-repeat;
+    color: rgb(20, 129, 192);
+    background-color: red;
 }
