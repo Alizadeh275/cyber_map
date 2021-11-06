@@ -52,6 +52,16 @@ body {
     background-color: rgb(20, 162, 245);
 }
 
+a.active {
+    background-color: white;
+    color: rgb(20, 129, 192);
+}
+
+a.active:hover {
+    background-color: white;
+    color: rgb(20, 129, 192);
+}
+
 .topnav a#logout:hover {
     background-color: rgb(20, 129, 192);
     color: white;
