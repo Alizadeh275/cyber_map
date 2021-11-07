@@ -104,7 +104,7 @@ a.active:hover {
 
 @media screen and (max-width: 784px) {
     .topnav.responsive {
-        position: relative;
+        /* position: relative; */
     }
     /* put each link on bottom of each other by display=block */
     .topnav.responsive a:not(:nth-child(1)) {

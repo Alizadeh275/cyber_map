@@ -217,10 +217,11 @@
     <script>
         function myFunction() {
             var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
+            // alert(x.className);
+            if (x.className === "topnav fixed-top") {
                 x.className += " responsive";
             } else {
-                x.className = "topnav";
+                x.className = "topnav fixed-top";
             }
         }
     </script>
