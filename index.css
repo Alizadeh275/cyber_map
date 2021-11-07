@@ -112,6 +112,9 @@ a.active:hover {
     .topnav a#logout {
         float: right;
     }
+    i#brand_logo {
+        display: none;
+    }
 }
 
 label {}
