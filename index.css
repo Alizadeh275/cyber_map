@@ -145,3 +145,29 @@ label {}
     color: rgb(20, 129, 192);
     background-color: red;
 }
+
+thead {
+    background-color: rgb(20, 129, 192);
+    ;
+}
+
+th {
+    direction: rtl;
+    color: white;
+    font-weight: normal;
+}
+
+tr a {
+    text-decoration: none;
+    display: block;
+    color: #212529;
+}
+
+tr a.detail {
+    color: rgb(20, 129, 192);
+}
+
+tr a:hover {
+    text-decoration: none;
+    color: rgb(20, 129, 192);
+}

@@ -46,7 +46,7 @@
 
                     <select name="app_type" class="form-select text-right float-right" id="sel1" style="direction: rtl;">
                             <option class="text-right" style="direction: rtl;">ایران</option>
-                            <option class="text-right" style="direction: rtl;">بازی</option>
+                            <option class="text-right" style="direction: rtl;">روسیه</option>
                         </select>
 
                 </div>
@@ -70,10 +70,11 @@
                     <button id="document_download" class="btn float-right">دانلود سند</button>
                 </div>
 
-                <label for="doc_info" class="text-right float-right mt-5" style="direction: rtl;;">اطلاعات آماری سند:</label>
-
+                <h5>
+                    <label for="doc_info" class="text-right float-right mt-5" style="direction: rtl;;">اطلاعات آماری سند:</label>
+                </h5>
                 <table class="table table-hover">
-                    <thead class="table bg-light">
+                    <thead class="table">
                         <tr>
                             <th class="text-center" scope="col"> کلمات اصلی</th>
                             <th class="text-center" scope="col">ایست‌واژه‌ها</th>
@@ -93,15 +94,23 @@
                 </table>
 
 
-                <label for="" class="text-right float-right mt-4" style="direction: rtl;;">کلمات مهم سند با وزن TF-IDF بالا:</label>
+                <h5>
+                    <label for="" class="text-right float-right mt-4" style="direction: rtl;;">کلمات مهم سند با وزن TF-IDF بالا:</label>
 
+                </h5>
                 <table class="table table-hover">
-                    <thead class="table bg-light">
+                    <thead class="table">
                         <tr>
-                            <th class="text-center" scope="col">MAIN WORDS</th>
-                            <th class="text-center" scope="col">STOPWORDS</th>
-                            <th class="text-center" scope="col">DISTINCT WORDS</th>
-                            <th class="text-center" scope="col">TOTAL WORDS</th>
+                            <th class="text-center" scope="col">میانگین تعداد کلمات در اسناد</th>
+                            <th class="text-center" scope="col">وزن TF-IDF</th>
+                            <th class="text-center" scope="col">فراوانی کلمه در کل اسناد </th>
+                            <th class="text-center" scope="col"> تعداد اسناد حاوی </th>
+                            <th class="text-center" scope="col"> فراوانی کلمه در سند</th>
+                            <th class="text-center" scope="col">کلمه</th>
+
+                            <th class="text-center" scope="col">ردیف</th>
+
+
                         </tr>
                     </thead>
                     <tbody>
@@ -109,6 +118,18 @@
                             <td class="text-center">184</td>
                             <td class="text-center">119</td>
                             <td class="text-center">173</td>
+                            <td class="text-center">303</td>
+                            <td class="text-center">303</td>
+                            <td class="text-center">تجارت</td>
+                            <td class="text-center">303</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">184</td>
+                            <td class="text-center">119</td>
+                            <td class="text-center">173</td>
+                            <td class="text-center">303</td>
+                            <td class="text-center">303</td>
+                            <td class="text-center">قانون</td>
                             <td class="text-center">303</td>
                         </tr>
 

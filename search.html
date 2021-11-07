@@ -4,9 +4,17 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="index.css">
+
     <!-- Option 1: Include in HTML -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="index.css">
     <title> جست‌وجوی مصوبات</title>
 
 </head>
@@ -26,6 +34,85 @@
             خروج</a>
 
     </div>
+
+
+    <div class="row p-5 flex-row-reverse bg-white">
+        <form action="" class="custom-control mx-auto needs-validation" id="info_form" enctype="multipart/form-data" method="post" novalidate>
+            <div class="row flex-row-reverse mx-auto">
+                <div class="col-md-6 pt-3 col-12 col-lg-3 bg-white">
+
+                    <label for="sel1" class=" text-right bg-white float-right" style="direction: rtl;;">کشور:</label>
+
+                    <select name="app_type" class="form-select text-right float-right" id="sel1" style="direction: rtl;">
+                            <option class="text-right" style="direction: rtl;">ایران</option>
+                            <option class="text-right" style="direction: rtl;">روسیه</option>
+                        </select>
+
+                </div>
+
+                <div class="col-md-6 pt-3 col-12 col-lg-3 bg-white">
+                    <label class="float-right" style="direction: rtl;">عبارت مورد نظر:</label>
+                    <input style="direction: rtl;" class="float-left form-control text-right" placeholder="متن جست‌وجو ..." type="text" required="" name="name" value="">
+
+                </div>
+                <div class="col-lg-3 col-md-6 pt-5 col-12">
+
+                    <button id="document_download" class="btn float-right"> جست‌وجو</button>
+                </div>
+
+                <h5> <label for="doc_info" class="text-right float-right mt-5" style="direction: rtl;;">  نتایج جست‌وجو:</label>
+                </h5>
+                <table class="table table-hover">
+                    <thead class="table">
+                        <tr>
+                            <th class="text-center" scope="col"> جزئیات</th>
+                            <th class="text-center" scope="col"> تعداد تکرار</th>
+
+                            <th class="text-center" scope="col"> سال تصویب</th>
+                            <th class="text-center" scope="col">مرجع تصویب</th>
+                            <th class="text-center" scope="col"> نام سند</th>
+                            <th class="text-center" scope="col"> ردیف</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center"><a class="detail" href="#detail">جزئیات</a></td>
+                            <td class="text-center">5</td>
+                            <td class="text-center">1383</td>
+                            <td class="text-center"> بانک مرکزی</td>
+                            <td class="text-center"><a href="#doc">اتخاذ تصمیماتی در خصوص بند (د) ماده 38 و بند (الف) ماده 42 قانون تجارت ‌الکترونیکی</a></td>
+                            <td class="text-center">1</td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-center"><a class="detail" href="#detail">جزئیات</a></td>
+                            <td class="text-center">27</td>
+                            <td class="text-center">1382</td>
+                            <td class="text-center">وزارت بازرگانی</td>
+                            <td class="text-center"><a href="#doc">قانون تجارت الکترونیکی</a></td>
+                            <td class="text-center">2</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><a class="detail" href="#detail">جزئیات</a></td>
+                            <td class="text-center">4</td>
+                            <td class="text-center"></td>
+                            <td class="text-center"> وزارت فرهنگ و ارشاد اسلامی</td>
+                            <td class="text-center"><a href="#doc">آیین‌نامه ساماندهی و توسعه رسانه‌ها و فعالیت‌های فرهنگی دیجیتال</a></td>
+                            <td class="text-center">3</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+
+                </table>
+
+
+            </div>
+        </form>
+    </div>
+
 
 
     <script>
