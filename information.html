@@ -92,83 +92,94 @@
             </div>
         </form>
 
-        <!-- Result segments -->
+        <!-- Result segments
+            There are some segments and each segment made from 2 parts:
+            <h5>
+            <table>
+        -->
 
 
-        <!-- statistical doc info -->
+        <!-- statistical doc info segment -->
         <h5>
             <label for="doc_info" class="text-right float-right mt-5" style="direction: rtl;;">اطلاعات آماری
                 سند:</label>
         </h5>
-        <table class="table table-hover">
-            <thead class="table">
-                <tr>
-                    <th class="text-center" scope="col"> کلمات اصلی</th>
-                    <th class="text-center" scope="col">ایست‌واژه‌ها</th>
-                    <th class="text-center" scope="col">کلمات متمایز</th>
-                    <th class="text-center" scope="col">کل کلمات</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="text-center">184</td>
-                    <td class="text-center">119</td>
-                    <td class="text-center">173</td>
-                    <td class="text-center">303</td>
-                </tr>
+        <div class="table-responsive">
+            <table class="table table-hover  caption-top">
+                <thead class="table">
+                    <tr>
+                        <th class="text-center" scope="col"> کلمات اصلی</th>
+                        <th class="text-center" scope="col">ایست‌واژه‌ها</th>
+                        <th class="text-center" scope="col">کلمات متمایز</th>
+                        <th class="text-center" scope="col">کل کلمات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">184</td>
+                        <td class="text-center">119</td>
+                        <td class="text-center">173</td>
+                        <td class="text-center">303</td>
+                    </tr>
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
+
 
 
         <!-- TF-IDF Segment -->
-        <h5>
+        <h5 id="TF_IDF_header">
             <label for="" class="text-right float-right mt-4" style="direction: rtl;;">کلمات مهم سند با وزن TF-IDF
                 بالا:</label>
         </h5>
-        <table class="table table-hover">
-            <thead class="table">
-                <tr>
-                    <th class="text-center" scope="col">میانگین تعداد کلمات در اسناد</th>
-                    <th class="text-center" scope="col">وزن TF-IDF</th>
-                    <th class="text-center" scope="col">فراوانی کلمه در کل اسناد </th>
-                    <th class="text-center" scope="col"> تعداد اسناد حاوی </th>
-                    <th class="text-center" scope="col"> فراوانی کلمه در سند</th>
-                    <th class="text-center" scope="col">کلمه</th>
 
-                    <th class="text-center" scope="col">ردیف</th>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table">
+                    <tr>
+                        <th class="text-center" scope="col">میانگین تعداد کلمات در اسناد</th>
+                        <th class="text-center" scope="col">وزن TF-IDF</th>
+                        <th class="text-center" scope="col">فراوانی کلمه در کل اسناد </th>
+                        <th class="text-center" scope="col"> تعداد اسناد حاوی </th>
+                        <th class="text-center" scope="col"> فراوانی کلمه در سند</th>
+                        <th class="text-center" scope="col">کلمه</th>
+
+                        <th class="text-center" scope="col">ردیف</th>
 
 
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="text-center">184</td>
-                    <td class="text-center">119</td>
-                    <td class="text-center">173</td>
-                    <td class="text-center">303</td>
-                    <td class="text-center">303</td>
-                    <td class="text-center">تجارت</td>
-                    <td class="text-center">1</td>
-                </tr>
-                <tr>
-                    <td class="text-center">184</td>
-                    <td class="text-center">119</td>
-                    <td class="text-center">173</td>
-                    <td class="text-center">303</td>
-                    <td class="text-center">303</td>
-                    <td class="text-center">قانون</td>
-                    <td class="text-center">2</td>
-                </tr>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">184</td>
+                        <td class="text-center">119</td>
+                        <td class="text-center">173</td>
+                        <td class="text-center">303</td>
+                        <td class="text-center">303</td>
+                        <td class="text-center">تجارت</td>
+                        <td class="text-center">1</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">184</td>
+                        <td class="text-center">119</td>
+                        <td class="text-center">173</td>
+                        <td class="text-center">303</td>
+                        <td class="text-center">303</td>
+                        <td class="text-center">قانون</td>
+                        <td class="text-center">2</td>
+                    </tr>
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
 
-        <h5 id="definition_header" class="header border text-white p-2  mb-0">
+        <!-- Definition Segment -->
+        <h5 id="Definition_header" class="header border text-white p-2  mb-0">
             <label for="" class="text-right float-right p-0 m-0 px-2 " style="direction: rtl;;">بخش تعاریف و اصطلاحات</label>
         </h5>
 
-        <div id="definition-container" class="text-right border p-4" style="direction: rtl;">
+        <div id="definition_container" class="text-right border p-4" style="direction: rtl;">
             تعاریف ماده 2 – الف - «داده پیام» (Data Message): هر نمادی از واقعه، اطلاعات یا مفهوم است که با وسایل الکترونیکی، نوری و یا فناوری‌های جدید اطلاعات تولید، ارسال، دریافت، ذخیره یا پردازش می‌شود. ب - «اصل ساز» (Originator): منشأ اصلی «داده پیام» است که
             «داده پیام» به وسیله او یا از طرف او تولید یا ارسال می‌شود اما شامل شخصی که در خصوص «داده پیام» به عنوان واسطه عمل می‌کند نخواهد شد. ج - «مخاطب» (Addressee): شخصی است که اصل ساز قصد دارد وی «داده پیام» را دریافت کند، اما شامل شخصی که در ارتباط
             با «داده پیام» به عنوان واسطه عمل می‌کند نخواهد شد. د - «ارجاع در داده پیام» (Incorporation By Reference): یعنی به منابعی خارج از «داده پیام» عطف شود که در صورت مطابقت با ماده (18) این قانون جزیی از «داده پیام» محسوب می‌شود. هـ - «تمامیت داده
@@ -186,10 +197,8 @@
             مربوطه را بر روی آن ذخیره کند از جمله شامل فلاپی دیسک، دیسک فشرده، دیسک سخت و یا پست الکترونیکی مصرف‌کننده. ر - «داده پیام‌های شخصی» (Private Data): یعنی «داده پیام»‌های مربوط به یک شخص حقیقی (موضوع «داده» Data Subject) مشخص و معین.
         </div>
 
-
-
-
-        <h5 class="header border text-white p-2  mb-0">
+        <!-- Primary Keywords Segment -->
+        <h5 id="Primary_Keywords_header" class="header border text-white p-2  mb-0">
             <label for="" class="text-right float-right p-0 m-0 px-2 " style="direction: rtl;;">کلید واژه‌های ابتدایی</label>
         </h5>
 
@@ -200,8 +209,8 @@
             Contract) - ق - «واسط با دوام» (Durable Medium) - ر - «داده پیام‌های شخصی» (Private Data)
         </div>
 
-
-        <h5 class="header border text-white p-2  mb-0">
+        <!-- Final Keywords Segment -->
+        <h5 id="Final_Keywords_header" class="header border text-white p-2  mb-0">
             <label for="" class="text-right float-right p-0 m-0 px-2 " style="direction: rtl;;">کلید واژه‌های نهایی</label>
         </h5>
 
@@ -211,6 +220,94 @@
             - تأمین‌کننده Supplier - وسایل ارتباط از راه دور Means Of Distance Communication - عقد از راه دور Distance Contract - واسط با دوام Durable Medium - داده پیام‌های شخصی Private Data
         </div>
 
+        <!-- container for 2-gram words whit (h and table) -->
+        <div class="col-md-6 px-0 col-12 col-lg-6 pt-1">
+            <h5 class="header border text-white text-center  p-2  mb-0">
+                کلمات مهم 2-گرم
+            </h5>
+            <div class="table-responsive mt-0">
+                <table class="table table-hover table-bordered border-secondary">
+                    <thead class="table">
+                        <tr>
+                            <th class="text-center" scope="col"> فراوانی</th>
+                            <th class="text-center" scope="col">کلمه</th>
+                            <th class="text-center" scope="col">ردیف</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">3</td>
+                            <td class="text-center">سامانه کار</td>
+                            <td class="text-center">1</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">3</td>
+                            <td class="text-center">دستگاه اجرایی</td>
+                            <td class="text-center">2</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+        <!-- container for 3-gram words with (h and table) -->
+        <div class="col-md-6 px-0 col-12 col-lg-6 pt-1">
+            <h5 class="header border text-white text-center  p-2  mb-0">
+                کلمات مهم 3-گرم
+            </h5>
+            <div class="table-responsive mt-0">
+                <table class="table table-hover table-bordered border-secondary">
+                    <thead class="table">
+                        <tr>
+                            <th class="text-center" scope="col"> فراوانی</th>
+                            <th class="text-center" scope="col">کلمه</th>
+                            <th class="text-center" scope="col">ردیف</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">3</td>
+                            <td class="text-center">سامانه کار پوشه</td>
+                            <td class="text-center">1</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">3</td>
+                            <td class="text-center">دستگاه اجرایی نهادهای</td>
+                            <td class="text-center">2</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <!-- First two paragraph -->
+        <h5 id="Primary_Keywords_header" class="header border text-white p-2  mb-0">
+            <label for="" class="text-right float-right p-0 m-0 px-2 " style="direction: rtl;;">دو پاراگراف ابتدایی</label>
+        </h5>
+
+        <div class="text-right border p-4" style="direction: rtl;">
+            - آیین‌نامه نحوه استفاده از سامانه‌های رایانه‌ای یا مخابراتی شماره 9000/29885/100 مورخ 1395/5/25 رییس قوه قضاییه - در اجرای مواد 175 و 176 قانون آیین دادرسی کیفری و بنا به پیشنهاد وزیر دادگستری آیین‌نامه نحوه استفاده از سامانه‌های رایانه‌ای یا مخابراتی
+            به شرح مواد آتی است.
+        </div>
+
+        <!-- Final Keywords Segment -->
+        <h5 id="Final_Keywords_header" class="header border text-white p-2  mb-0">
+            <label for="" class="text-right float-right p-0 m-0 px-2 " style="direction: rtl;;">دو پاراگراف نهایی</label>
+        </h5>
+
+        <div id="keywords_container" class="text-right border p-4" style="direction: rtl;">
+            - ماده 31 ـ دولت مکلف است در اجرای ماده 567 قانون آیین دادرسی کیفری اعتبارات موردنیاز اجرایی این آیین‌نامه را در ردیف مستقل در بودجه سالیانه قوه قضاییه پیش‌بینی و درج نماید. - ماده 32 ـ این آیین‌نامه در 32 ماده و 19 تبصره توسط وزیر دادگستری و با همکاری
+            وزیر ارتباطات و فناوری اطلاعات تهیه و در تاریخ 1395/5/24 به تصویب رییس قوه قضاییه رسید.
+        </div>
     </div>
 
 
