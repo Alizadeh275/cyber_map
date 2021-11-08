@@ -1,3 +1,11 @@
+:root {
+    --menu_color: rgb(20, 129, 192);
+    --bg_color: rgb(248, 249, 250);
+    --nav_link_color: #f2f2f2;
+    --brand_name_color: white;
+    --nav_active_color: white;
+}
+
 @font-face {
     font-family: vazir;
     /* src: url("/fonts/Vazir-FD.ttf"); */
@@ -7,12 +15,12 @@
 body {
     margin: 0;
     font-family: vazir;
-    background-color: rgb(248, 249, 250);
+    background-color: var(--bg_color);
 }
 
 .topnav {
     overflow: hidden;
-    background-color: rgb(20, 129, 192);
+    background-color: var(--menu_color);
     z-index: 2;
     position: sticky;
 }
@@ -20,7 +28,8 @@ body {
 .topnav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: var(--nav_link_color);
+    ;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -29,8 +38,9 @@ body {
 }
 
 .topnav a#brand_name {
-    background-color: rgb(20, 129, 192);
-    color: white;
+    background-color: var(--menu_color);
+    color: var(--brand_name_color);
+    ;
     margin-left: 40px;
 }
 
@@ -60,25 +70,28 @@ body {
 }
 
 a.active {
-    background-color: white;
+    background-color: var(--nav_active_color);
+    ;
     /* f5f5f5 */
     color: rgb(20, 129, 192);
-    border-bottom: 1px solid rgb(20, 129, 192);
+    border-bottom: 1px solid var(--menu_color);
 }
 
 a.active:hover {
-    background-color: white;
-    color: rgb(20, 129, 192);
+    background-color: var(--nav_active_color);
+    ;
+    color: var(--menu_color);
 }
 
 .topnav a#logout:hover {
-    background-color: rgb(20, 129, 192);
+    background-color: var(--menu_color);
     color: white;
 }
 
 .topnav a#brand_name:hover {
-    background-color: rgb(20, 129, 192);
-    color: white;
+    background-color: var(--menu_color);
+    color: var(--nav_active_color);
+    ;
 }
 
 
@@ -95,7 +108,7 @@ a.active:hover {
     }
     /* remove hover on menu icon at responsive view */
     .topnav a#menu_icon:hover {
-        background-color: rgb(20, 129, 192);
+        background-color: var(--menu_color);
         color: white;
     }
     i#brand_logo {
@@ -130,14 +143,20 @@ a.active:hover {
 }
 
 #document_download {
-    background-color: rgb(20, 129, 192);
+    background-color: var(--menu_color);
     color: white;
 }
 
 thead,
 h5.header {
     background-color: rgb(72, 143, 184);
-    ;
+    /* background-color: rgb(21, 87, 126); */
+}
+
+h5.table_header,
+#TF_IDF_header,
+#term_count_header {
+    color: var(--menu_color);
 }
 
 th {
@@ -153,10 +172,25 @@ tr a {
 }
 
 tr a.detail {
-    color: rgb(20, 129, 192);
+    color: var(--menu_color);
 }
 
 tr a:hover {
     text-decoration: none;
+    color: var(--menu_color);
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    /* color: #fff; */
     color: rgb(20, 129, 192);
+    /* background-color: var(--menu_color); */
+    /* background-color: rgb(72, 143, 184); */
+    background-color: white;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top: 1px solid var(--menu_color);
+    border-right: 1px solid var(--menu_color);
+    border-left: 1px solid var(--menu_color);
 }
