@@ -1,6 +1,7 @@
 @font-face {
     font-family: vazir;
-    src: url("/fonts/Vazir-FD.ttf");
+    /* src: url("/fonts/Vazir-FD.ttf"); */
+    src: url("cyber_map/fonts/Vazir-FD.ttf");
 }
 
 body {
