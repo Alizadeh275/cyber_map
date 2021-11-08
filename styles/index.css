@@ -43,10 +43,13 @@ body {
     float: right;
 }
 
-.fa-sign-out {
+#logout_icon {
     /* flip logout icon */
     transform: scaleX(-1);
     margin-right: 5px;
+    position: relative;
+    top: 2px;
+    font-weight: bold;
 }
 
 
