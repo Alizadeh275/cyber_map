@@ -11,19 +11,17 @@ var data = [
     ["اختصاصی-تخصصی", 9],
 ];
 
-// create a chart
-chart = anychart.column();
 
 // create a column series and set the data
 var series = chart.column(data);
 
-// set the container id
-chart.container("barchart_container");
+
+
 chart.background().fill('#f8f9fa');
 
-var state = series.normal();
-
+// var state = series.normal();
 // state.fill('#1481c0')
+
 // x axix labels font setting
 var xAxisLabels = chart.xAxis().labels();
 xAxisLabels.fontFamily("vazir");
@@ -31,7 +29,7 @@ xAxisLabels.fontFamily("vazir");
 var yAxisLabels = chart.yAxis().labels();
 yAxisLabels.fontFamily("vazir");
 
-// allow labels overlapping
+// Not allow labels overlapping
 var xAxis = chart.xAxis();
 xAxis.overlapMode("noOverlap");
 
@@ -44,7 +42,10 @@ tooltip.fontFamily("vazir");
 var title = chart.tooltip().title();
 title.fontFamily("vazir");
 
+chart.tooltip().hAlign('center').format("%{%value}");
 
+
+// set all axis title 
 var xAxis = chart.xAxis();
 xAxis.title("موضوع");
 xAxis.title().fontFamily('vazir');
@@ -54,7 +55,6 @@ yAxis.title("مشارکت");
 yAxis.title().fontFamily('vazir');
 chart.yAxis().labels().format("٪{%value}");
 
-chart.tooltip().hAlign('center').format("%{%value}");
 
 
 
