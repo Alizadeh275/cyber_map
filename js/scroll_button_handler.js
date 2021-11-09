@@ -16,4 +16,5 @@ function scrollFunction() {
 $('#scroll_btn').click(function() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+    $('#scroll_btn').css('color', '#ccc');
 })
