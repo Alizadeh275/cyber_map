@@ -20,6 +20,7 @@
     <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-core.min.js"></script>
     <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-cartesian.min.js"></script>
 
+
     <link rel="stylesheet" href="styles/index.css">
 
     <title> نمایش مصوبات</title>
@@ -71,8 +72,9 @@
                 <!-- Document select -->
                 <div class="col-md-6 pt-3 col-12 col-lg-5 bg-light mt-1">
 
+
                     <label for="document" class="text-right bg-light float-right">سند:</label>
-                    <select id="document" name="document" class="form-select text-right float-right" id="sel1">
+                    <select id="document" name="document" class="form-select text-right float-right">
                         <option class="text-right" >
                             انتخاب نمایید ...
                         </option>
@@ -199,7 +201,7 @@
                 </div>
 
             </div>
-
+            <!-- Definition and keywords Pane -->
             <div class="tab-pane w-100 fade float-right  px-0 border-0" id="def_keywords_pane" role="tabpanel" aria-labelledby="def_keywords_tab">
 
                 <!-- Definition Segment -->
@@ -385,7 +387,20 @@
             </div>
 
             <div class="tab-pane fade float-right w-100" id="subject_analysis_pane" role="tabpanel" aria-labelledby="subject_analysis_tab">
+                <!-- Subject distribution segment -->
+                <h6 class="subject_distribution w-100 mt-4 text-right float-right">
+                    توزیع موضوعی سند
+                </h6>
+                <br>
 
+                <div id="barchart_container" class="bg-light w-100 p-4 pb-2">
+                    <script>
+                        chart = anychart.column();
+                        chart.container("barchart_container");
+                    </script>
+                    <script src="js/information/chart_handler.js">
+                    </script>
+                </div>
 
                 <!-- Keywords for each subject segment -->
                 <h6 class="subject_keywords">
@@ -415,20 +430,7 @@
                         </tbody>
                     </table>
                 </div>
-                <!-- Subject distribution segment -->
-                <h5 class="subject_distribution w-100 mt-3 text-right float-right">
-                    توزیع موضوعی سند
-                </h5>
-                <br>
 
-                <div id="barchart_container" class="bg-light w-100 p-4 pb-2">
-                    <script>
-                        chart = anychart.column();
-                        chart.container("barchart_container");
-                    </script>
-                    <script src="js/information/chart_handler.js">
-                    </script>
-                </div>
 
 
             </div>
@@ -728,6 +730,21 @@
             </div>
 
             <div class="tab-pane fade float-right w-100" id="subject_analysis_pane1" role="tabpanel" aria-labelledby="subject_analysis_tab1">
+
+                <h6 class="subject_distribution w-100 mt-3 text-right float-right">
+                    توزیع موضوعی سند
+                </h6>
+                <br>
+
+                <div id="barchart_container1" class="bg-light w-100 px-1 p-2 pb-2 p-sm-4 px-sm-4">
+
+                    <script>
+                        chart = anychart.column();
+                        chart.container("barchart_container1");
+                    </script>
+                    <script src="js/information/chart_handler.js">
+                    </script>
+                </div>
                 <!-- Subject keywords segment -->
                 <h6 class="subject_keywords">
                     <label for="doc_info" class="text-right float-right mt-5">واژه‌های کلیدی سند در هر موضوع</label>
@@ -757,25 +774,14 @@
                     </table>
                 </div>
 
-                <h5 class="subject_distribution w-100 mt-3 text-right float-right">
-                    توزیع موضوعی سند
-                </h5>
-                <br>
 
-                <div id="barchart_container1" class="bg-light w-100 px-1 p-2 pb-2 p-sm-4 px-sm-4">
-
-                    <script>
-                        chart = anychart.column();
-                        chart.container("barchart_container1");
-                    </script>
-                    <script src="js/information/chart_handler.js">
-                    </script>
-                </div>
 
             </div>
         </div>
 
     </div>
+
+
 
     <button id="scroll_btn" class="p-0" title="بالای صفحه" onclick="topFunction()">
         <i class="far fa-caret-square-up"></i>

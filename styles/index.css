@@ -115,20 +115,27 @@ h6.table_header,
     color: var(--menu_color);
 }
 
+#def_keywords_pane,
+#def_keywords_pane1 {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 th {
     direction: rtl;
     color: white;
     font-weight: normal;
 }
 
-.doc_info_table thead,
+
+/* .doc_info_table thead,
 .tf_idf_table thead,
 #Primary_Keywords_header,
 #Final_Keywords_header,
 #First_two_para_header,
 #Last_two_para_header {
     background-color: rgb(87, 87, 87);
-}
+} */
 
 tr a {
     text-decoration: none;
