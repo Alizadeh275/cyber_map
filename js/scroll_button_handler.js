@@ -5,9 +5,10 @@ window.onscroll = function() {
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("scroll_btn").style.display = "block";
+        $('#scroll_btn').css('display', 'block');
     } else {
-        document.getElementById("scroll_btn").style.display = "none";
+        $('#scroll_btn').css('display', 'none');
+
 
     }
 }
