@@ -1,6 +1,6 @@
 :root {
-    --menu_color: rgb(20, 129, 192);
-    --bg_color: rgb(248, 249, 250);
+    --menu_color: #1481c0;
+    --bg_color: #f8f9fa;
     --nav_link_color: #f2f2f2;
     --brand_name_color: white;
     --nav_active_color: white;
@@ -148,12 +148,12 @@ a.active:hover {
 }
 
 thead,
-h5.header {
-    background-color: rgb(72, 143, 184);
+h6.header {
+    background-color: #488fb8;
     /* background-color: rgb(21, 87, 126); */
 }
 
-h5.table_header,
+h6.table_header,
 #TF_IDF_header,
 #term_count_header {
     color: var(--menu_color);
@@ -193,4 +193,12 @@ tr a:hover {
     border-top: 1px solid var(--menu_color);
     border-right: 1px solid var(--menu_color);
     border-left: 1px solid var(--menu_color);
+}
+
+.anychart-credits {
+    display: none;
+}
+
+#barchart_container {
+    height: 300px;
 }

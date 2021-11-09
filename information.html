@@ -3,19 +3,21 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Option 1: Include in HTML -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Option 1: Include in HTML -->
+    <!--BS Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Fontawesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- anychart modules -->
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-cartesian.min.js"></script>
 
     <link rel="stylesheet" href="styles/index.css">
 
@@ -46,10 +48,10 @@
     <!-- End of Menu -->
 
 
-
-
-
+    <!-- Main Container -->
     <div class="row px-0 py-5 flex-row-reverse m-0  px-md-5 py-md-5">
+
+        <!-- Form Inputs -->
         <form action="" class="custom-control mx-auto needs-validation" id="info_form" enctype="multipart/form-data" method="post" novalidate>
 
             <div class="row flex-row-reverse mx-auto">
@@ -97,13 +99,7 @@
             </div>
         </form>
 
-        <!-- Result segments
-            There are some segments and each segment made from 2 parts:
-            <h5>
-            <table>
-        -->
-
-        <!--Original Tabs -->
+        <!--Original Tabs: Only show on large screens -->
         <ul class="nav nav-pills d-none d-sm-block mt-5 mx-auto  border-bottom pr-3 pr-sm-0  float-right  d-block" id="pills-tab" role="tablist">
             <li class="nav-item float-right" role="presentation">
                 <button class="nav-link active" id="doc_info_tab" data-bs-toggle="pill" data-bs-target="#doc_info_pane" type="button" role="tab" aria-controls="doc_info_pane" aria-selected="true">اطلاعات آماری</button>
@@ -128,10 +124,10 @@
             <div class="tab-pane w-100 fade show active float-right" id="doc_info_pane" role="tabpanel" aria-labelledby="doc_info_tab">
 
                 <!-- statistical doc info segment -->
-                <h5 id="term_count_header">
+                <h6 id="term_count_header">
                     <label for="doc_info" class="text-right float-right mt-5" style="direction: rtl;;">تعداد کلمات
                 سند:</label>
-                </h5>
+                </h6>
                 <div class="table-responsive">
                     <table class="table table-hover  caption-top">
                         <thead class="table">
@@ -157,10 +153,10 @@
 
 
                 <!-- TF-IDF Segment -->
-                <h5 id="TF_IDF_header">
+                <h6 id="TF_IDF_header">
                     <label for="" class="text-right float-right mt-4" style="direction: rtl;;">کلمات مهم سند با وزن TF-IDF
                 بالا:</label>
-                </h5>
+                </h6>
 
                 <div class="table-responsive">
                     <table class="table table-hover">
@@ -207,9 +203,9 @@
             <div class="tab-pane w-100 fade float-right  px-0 border-0" id="def_keywords_pane" role="tabpanel" aria-labelledby="def_keywords_tab">
 
                 <!-- Definition Segment -->
-                <h5 id="Definition_header" class="header mt-4  text-white d-block w-100 pt-2 px-4 float-right">
+                <h6 id="Definition_header" class="header mt-4  text-white d-block w-100 pt-2 px-4 float-right">
                     <label for="definition_container" class="text-right float-right d-block" style="direction: rtl;;">بخش تعاریف و اصطلاحات</label>
-                </h5>
+                </h6>
                 <div id="definition_container" class="text-right border border-top-0 p-4" style="direction: rtl;">
                     تعاریف ماده 2 – الف - «داده پیام» (Data Message): هر نمادی از واقعه، اطلاعات یا مفهوم است که با وسایل الکترونیکی، نوری و یا فناوری‌های جدید اطلاعات تولید، ارسال، دریافت، ذخیره یا پردازش می‌شود. ب - «اصل ساز» (Originator): منشأ اصلی «داده پیام» است که
                     «داده پیام» به وسیله او یا از طرف او تولید یا ارسال می‌شود اما شامل شخصی که در خصوص «داده پیام» به عنوان واسطه عمل می‌کند نخواهد شد. ج - «مخاطب» (Addressee): شخصی است که اصل ساز قصد دارد وی «داده پیام» را دریافت کند، اما شامل شخصی
@@ -230,9 +226,9 @@
                 </div>
 
                 <!-- Primary Keywords Segment -->
-                <h5 id="Primary_Keywords_header" class="header mt-0 border text-white d-block w-100 pt-2 px-4 float-right">
+                <h6 id="Primary_Keywords_header" class="header mt-0 border text-white d-block w-100 pt-2 px-4 float-right">
                     <label for="" class="text-right float-right " style="direction: rtl;;">کلید واژه‌های ابتدایی</label>
-                </h5>
+                </h6>
 
                 <div class="text-right border p-4" style="direction: rtl;">
                     الف - «داده پیام» (Data Message) - ب - «اصل ساز» (Originator) - ج - «مخاطب» (Addressee) - د - «ارجاع در داده پیام» (Incorporation By Reference) - هـ - «تمامیت داده پیام» (Integrity) - و - «سیستم رایانه‌ای» (Computer System) - ز - «سیستم اطلاعاتی» (Information
@@ -242,9 +238,9 @@
                 </div>
 
                 <!-- Final Keywords Segment -->
-                <h5 id="Final_Keywords_header" class="header mt-0 border text-white d-block w-100 pt-2 px-4 float-right">
+                <h6 id="Final_Keywords_header" class="header mt-0 border text-white d-block w-100 pt-2 px-4 float-right">
                     <label for="" class="text-right float-right" style="direction: rtl;;">کلید واژه‌های نهایی</label>
-                </h5>
+                </h6>
 
                 <div id="keywords_container" class="text-right border p-4" style="direction: rtl;">
                     داده پیام Data Message - اصل ساز Originator - مخاطب Addressee - ارجاع در داده پیام Incorporation By Reference - تمامیت داده پیام Integrity - سیستم رایانه‌ای Computer System - سیستم اطلاعاتی Information System - سیستم اطلاعاتی مطمین Secure Information
@@ -259,9 +255,9 @@
 
                     <!-- container for 2-gram words whit (h and table) -->
                     <div class="col-md-6 px-0 col-12 col-lg-6 pt-1">
-                        <h5 class="table_header text-center  p-2  mb-0">
+                        <h6 class="table_header text-center  p-2  mb-0">
                             کلمات مهم 2-گرم
-                        </h5>
+                        </h6>
                         <div class="table-responsive  mt-0">
                             <table class="table table-hover table-bordered border-secondary">
                                 <thead class="table">
@@ -294,9 +290,9 @@
 
                     <!-- container for 3-gram words with (h and table) -->
                     <div class="col-md-6 px-0 col-12 col-lg-6 pt-1">
-                        <h5 class="table_header text-center  p-2  mb-0">
+                        <h6 class="table_header text-center  p-2  mb-0">
                             کلمات مهم 3-گرم
-                        </h5>
+                        </h6>
                         <div class="table-responsive mt-0">
                             <table class="table table-hover table-bordered border-secondary">
                                 <thead class="table">
@@ -331,9 +327,9 @@
             </div>
             <div class="tab-pane w-100 fade float-right" id="paragraphs_pane" role="tabpanel" aria-labelledby="paragraphs_tab">
                 <!-- First two paragraph -->
-                <h5 id="Primary_Keywords_header" class="header mt-4 border text-white d-block w-100 pt-2 px-4 float-right">
+                <h6 id="Primary_Keywords_header" class="header mt-4 border text-white d-block w-100 pt-2 px-4 float-right">
                     <label for="" class="text-right float-right" style="direction: rtl;;">دو پاراگراف ابتدایی</label>
-                </h5>
+                </h6>
 
                 <div class="text-right border p-4 mt-5" style="direction: rtl;">
                     - آیین‌نامه نحوه استفاده از سامانه‌های رایانه‌ای یا مخابراتی <span class="text-primary">شماره 9000/29885/100 </span> مورخ<span class="text-warning"> 1395/5/25</span> رییس <span class="text-danger"> قوه قضاییه</span> - در اجرای مواد
@@ -341,9 +337,9 @@
                 </div>
 
                 <!-- Final Keywords Segment -->
-                <h5 id="Final_Keywords_header" class="header mt-0 border text-white d-block w-100 pt-2 px-4 float-right">
-                    <label for="" class="text-right float-right" style="direction: rtl;;">دو پاراگراف نهایی</label>
-                </h5>
+                <h6 id="Final_Keywords_header" class="header mt-0 border text-white d-block w-100 pt-2 px-4 float-right">
+                    <label for="" class="text-right float-right" style="direction: rtl;;">دو پاراگراف پایانی</label>
+                </h6>
 
                 <div id="keywords_container" class="text-right border p-4" style="direction: rtl;">
                     - ماده 31 ـ دولت مکلف است در اجرای ماده 567 قانون آیین دادرسی کیفری اعتبارات موردنیاز اجرایی این آیین‌نامه را در ردیف مستقل در بودجه سالیانه <span class="text-danger"> قوه قضاییه</span> پیش‌بینی و درج نماید. - ماده 32 ـ این آیین‌نامه
@@ -352,9 +348,9 @@
             </div>
             <div class="tab-pane w-100 fade float-right" id="reference_pane" role="tabpanel" aria-labelledby="reference_tab">
                 <!-- Primary Keywords Segment -->
-                <h5 id="Primary_Keywords_header" class="header mt-4 border text-white d-block w-100 pt-2 px-4 float-right">
+                <h6 id="Primary_Keywords_header" class="header mt-4 border text-white d-block w-100 pt-2 px-4 float-right">
                     <label for="" class="text-right float-right " style="direction: rtl;;">ارجاعات موجود در سند</label>
-                </h5>
+                </h6>
 
                 <div class="text-right border px-4" style="direction: rtl;">
                     <ul>
@@ -363,9 +359,9 @@
                 </div>
 
                 <!-- Final Keywords Segment -->
-                <h5 id="Final_Keywords_header" class="header mt-0 border text-white d-block w-100 pt-2 px-4 float-right">
+                <h6 id="Final_Keywords_header" class="header mt-0 border text-white d-block w-100 pt-2 px-4 float-right">
                     <label for="" class="text-right float-right" style="direction: rtl;;">اسناد ارجاع داده به سند</label>
-                </h5>
+                </h6>
 
                 <div id="keywords_container" class="text-right border px-4" style="direction: rtl;">
                     <ul>
@@ -381,11 +377,50 @@
             </div>
 
             <div class="tab-pane fade float-right w-100" id="subject_analysis_pane" role="tabpanel" aria-labelledby="subject_analysis_tab">
-                3
+
+
+                <!-- statistical doc info segment -->
+                <h6 id="term_count_header">
+                    <label for="doc_info" class="text-right float-right mt-5" style="direction: rtl;;">کلمات کلیدی سند در هر موضوع</label>
+                </h6>
+                <div class="table-responsive">
+                    <table class="table table-hover  caption-top">
+                        <thead class="table">
+                            <tr>
+                                <th class="text-center" scope="col">کلمات کلیدی</th>
+                                <th class="text-center" scope="col"> موضوع</th>
+                                <th class="text-center" scope="col">ردیف</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">اطلاعات - مجازی - داده - رایانه ای - ابری - ارتباطی - هوشمند - اینترنتی - شبکه - رایانه - اینترنت - برخط - الکترونیکی - زیرساخت</td>
+                                <td class="text-center">ارتباطات و فناوری اطلاعات</td>
+                                <td class="text-center">1</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">بانکداری- تقاضا- بودجه- درآمد</td>
+                                <td class="text-center">اقتصادی</td>
+                                <td class="text-center">2</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <h5 id="term_count_header" class="w-100 mt-3 text-right float-right">
+                    توزیع موضوعی سند
+                </h5>
+                <br>
+
+                <div id="barchart_container" class="bg-light w-100 p-4 pb-2">
+                </div>
+                <script src="js/information/chart_handler.js">
+                </script>
+
             </div>
         </div>
 
-        <!--Responsive Tabs -->
+        <!--Responsive Tabs: Only show on small screens -->
         <ul class="nav nav-pills d-sm-none mt-5 mx-auto  border-bottom pr-3 pr-sm-0  float-right  d-block" id="pills-tab" role="tablist">
             <li class="nav-item float-right" role="presentation">
                 <button class="nav-link active" id="doc_info_tab1" data-bs-toggle="pill" data-bs-target="#doc_info_pane1" type="button" role="tab" aria-controls="doc_info_pane1" aria-selected="true">اطلاعات آماری</button>
@@ -399,10 +434,10 @@
             <div class="tab-pane w-100 fade show active float-right" id="doc_info_pane1" role="tabpanel" aria-labelledby="doc_info_tab1">
 
                 <!-- statistical doc info segment -->
-                <h5 id="term_count_header">
+                <h6 id="term_count_header">
                     <label for="doc_info" class="text-right float-right mt-5" style="direction: rtl;;">تعداد کلمات
                 سند:</label>
-                </h5>
+                </h6>
                 <div class="table-responsive">
                     <table class="table table-hover  caption-top">
                         <thead class="table">
@@ -428,10 +463,10 @@
 
 
                 <!-- TF-IDF Segment -->
-                <h5 id="TF_IDF_header">
+                <h6 id="TF_IDF_header">
                     <label for="" class="text-right float-right mt-4" style="direction: rtl;;">کلمات مهم سند با وزن TF-IDF
                 بالا:</label>
-                </h5>
+                </h6>
 
                 <div class="table-responsive">
                     <table class="table table-hover">
@@ -478,9 +513,9 @@
             <div class="tab-pane w-100 fade float-right  px-0 border-0" id="def_keywords_pane1" role="tabpanel" aria-labelledby="def_keywords_tab1">
 
                 <!-- Definition Segment -->
-                <h5 id="Definition_header" class="header mt-4  text-white d-block w-100 pt-2 px-4 float-right">
+                <h6 id="Definition_header" class="header mt-4  text-white d-block w-100 pt-2 px-4 float-right">
                     <label for="definition_container" class="text-right float-right d-block" style="direction: rtl;;">بخش تعاریف و اصطلاحات</label>
-                </h5>
+                </h6>
                 <div id="definition_container" class="text-right border border-top-0 p-4" style="direction: rtl;">
                     تعاریف ماده 2 – الف - «داده پیام» (Data Message): هر نمادی از واقعه، اطلاعات یا مفهوم است که با وسایل الکترونیکی، نوری و یا فناوری‌های جدید اطلاعات تولید، ارسال، دریافت، ذخیره یا پردازش می‌شود. ب - «اصل ساز» (Originator): منشأ اصلی «داده پیام» است که
                     «داده پیام» به وسیله او یا از طرف او تولید یا ارسال می‌شود اما شامل شخصی که در خصوص «داده پیام» به عنوان واسطه عمل می‌کند نخواهد شد. ج - «مخاطب» (Addressee): شخصی است که اصل ساز قصد دارد وی «داده پیام» را دریافت کند، اما شامل شخصی
@@ -501,9 +536,9 @@
                 </div>
 
                 <!-- Primary Keywords Segment -->
-                <h5 id="Primary_Keywords_header" class="header mt-0 border text-white d-block w-100 pt-2 px-4 float-right">
+                <h6 id="Primary_Keywords_header" class="header mt-0 border text-white d-block w-100 pt-2 px-4 float-right">
                     <label for="" class="text-right float-right " style="direction: rtl;;">کلید واژه‌های ابتدایی</label>
-                </h5>
+                </h6>
 
                 <div class="text-right border p-4" style="direction: rtl;">
                     الف - «داده پیام» (Data Message) - ب - «اصل ساز» (Originator) - ج - «مخاطب» (Addressee) - د - «ارجاع در داده پیام» (Incorporation By Reference) - هـ - «تمامیت داده پیام» (Integrity) - و - «سیستم رایانه‌ای» (Computer System) - ز - «سیستم اطلاعاتی» (Information
@@ -513,9 +548,9 @@
                 </div>
 
                 <!-- Final Keywords Segment -->
-                <h5 id="Final_Keywords_header" class="header mt-0 border text-white d-block w-100 pt-2 px-4 float-right">
-                    <label for="" class="text-right float-right" style="direction: rtl;;">کلید واژه‌های نهایی</label>
-                </h5>
+                <h6 id="Final_Keywords_header" class="header mt-0 border text-white d-block w-100 pt-2 px-4 float-right">
+                    <label for="" class="text-right float-right" style="direction: rtl;;">کلید واژه‌های پایانی</label>
+                </h6>
 
                 <div id="keywords_container" class="text-right border p-4" style="direction: rtl;">
                     داده پیام Data Message - اصل ساز Originator - مخاطب Addressee - ارجاع در داده پیام Incorporation By Reference - تمامیت داده پیام Integrity - سیستم رایانه‌ای Computer System - سیستم اطلاعاتی Information System - سیستم اطلاعاتی مطمین Secure Information
@@ -525,8 +560,8 @@
 
             </div>
         </div>
-        <!-- End of Tab and Pane 1 -->
 
+        <!-- ------------------------------------------------------- -->
         <ul class="nav nav-pills d-sm-none mt-5 mx-auto  border-bottom pr-3 pr-sm-0  float-right  d-block" id="pills-tab" role="tablist">
             <li class="nav-item float-right" role="presentation">
                 <button class="nav-link active" id="multipe_terms_tab1" data-bs-toggle="pill" data-bs-target="#multipe_terms_pane1" type="button" role="tab" aria-controls="multipe_terms_pane1" aria-selected="false">کلمات 2-گرم/3-گرم</button>
@@ -539,13 +574,13 @@
         <div class="tab-content float-right d-sm-none" style="position: relative;" id="pills-tabContent">
             <div class="tab-pane fade show active float-right w-100" id="multipe_terms_pane1" role="tabpanel" aria-labelledby="multipe_terms_tab1">
 
-                <div class="row mt-4 w-100 flex-row-reverse">
+                <div class="row mt-4 w-100 flex-row-reverse mx-auto">
 
                     <!-- container for 2-gram words whit (h and table) -->
                     <div class="col-md-6 px-0 col-12 col-lg-6 pt-1">
-                        <h5 class="table_header text-center  p-2  mb-0">
+                        <h6 class="table_header text-center  p-2  mb-0">
                             کلمات مهم 2-گرم
-                        </h5>
+                        </h6>
                         <div class="table-responsive  mt-0">
                             <table class="table table-hover table-bordered border-secondary">
                                 <thead class="table">
@@ -578,9 +613,9 @@
 
                     <!-- container for 3-gram words with (h and table) -->
                     <div class="col-md-6 px-0 col-12 col-lg-6 pt-1">
-                        <h5 class="table_header text-center  p-2  mb-0">
+                        <h6 class="table_header text-center  p-2  mb-0">
                             کلمات مهم 3-گرم
-                        </h5>
+                        </h6>
                         <div class="table-responsive mt-0">
                             <table class="table table-hover table-bordered border-secondary">
                                 <thead class="table">
@@ -615,9 +650,9 @@
             </div>
             <div class="tab-pane w-100 fade float-right" id="paragraphs_pane1" role="tabpanel" aria-labelledby="paragraphs_tab1">
                 <!-- First two paragraph -->
-                <h5 id="Primary_Keywords_header" class="header mt-4 border text-white d-block w-100 pt-2 px-4 float-right">
+                <h6 id="Primary_Keywords_header" class="header mt-4 border text-white d-block w-100 pt-2 px-4 float-right">
                     <label for="" class="text-right float-right" style="direction: rtl;;">دو پاراگراف ابتدایی</label>
-                </h5>
+                </h6>
 
                 <div class="text-right border p-4 mt-5" style="direction: rtl;">
                     - آیین‌نامه نحوه استفاده از سامانه‌های رایانه‌ای یا مخابراتی <span class="text-primary">شماره 9000/29885/100 </span> مورخ<span class="text-warning"> 1395/5/25</span> رییس <span class="text-danger"> قوه قضاییه</span> - در اجرای مواد
@@ -625,9 +660,9 @@
                 </div>
 
                 <!-- Final Keywords Segment -->
-                <h5 id="Final_Keywords_header" class="header mt-0 border text-white d-block w-100 pt-2 px-4 float-right">
-                    <label for="" class="text-right float-right" style="direction: rtl;;">دو پاراگراف نهایی</label>
-                </h5>
+                <h6 id="Final_Keywords_header" class="header mt-0 border text-white d-block w-100 pt-2 px-4 float-right">
+                    <label for="" class="text-right float-right" style="direction: rtl;;">دو پاراگراف پایانی</label>
+                </h6>
 
                 <div id="keywords_container" class="text-right border p-4" style="direction: rtl;">
                     - ماده 31 ـ دولت مکلف است در اجرای ماده 567 قانون آیین دادرسی کیفری اعتبارات موردنیاز اجرایی این آیین‌نامه را در ردیف مستقل در بودجه سالیانه <span class="text-danger"> قوه قضاییه</span> پیش‌بینی و درج نماید. - ماده 32 ـ این آیین‌نامه
@@ -636,7 +671,7 @@
             </div>
         </div>
 
-
+        <!-- -------------------------------------------------------- -->
         <ul class="nav nav-pills d-sm-none mt-5 mx-auto  border-bottom pr-3 pr-sm-0  float-right  d-block" id="pills-tab" role="tablist">
             <li class="nav-item float-right" role="presentation">
                 <button class="nav-link active" id="reference_tab1" data-bs-toggle="pill" data-bs-target="#reference_pane1" type="button" role="tab" aria-controls="reference_pane1" aria-selected="false">ارجاعات</button>
@@ -649,9 +684,9 @@
         <div class="tab-content float-right d-sm-none" style="position: relative;" id="pills-tabContent">
             <div class="tab-pane w-100 fade show active float-right" id="reference_pane1" role="tabpanel" aria-labelledby="reference_tab1">
                 <!-- Primary Keywords Segment -->
-                <h5 id="Primary_Keywords_header" class="header mt-4 border text-white d-block w-100 pt-2 px-4 float-right">
+                <h6 id="Primary_Keywords_header" class="header mt-4 border text-white d-block w-100 pt-2 px-4 float-right">
                     <label for="" class="text-right float-right " style="direction: rtl;;">ارجاعات موجود در سند</label>
-                </h5>
+                </h6>
 
                 <div class="text-right border px-4" style="direction: rtl;">
                     <ul>
@@ -660,9 +695,9 @@
                 </div>
 
                 <!-- Final Keywords Segment -->
-                <h5 id="Final_Keywords_header" class="header mt-0 border text-white d-block w-100 pt-2 px-4 float-right">
+                <h6 id="Final_Keywords_header" class="header mt-0 border text-white d-block w-100 pt-2 px-4 float-right">
                     <label for="" class="text-right float-right" style="direction: rtl;;">اسناد ارجاع داده به سند</label>
-                </h5>
+                </h6>
 
                 <div id="keywords_container" class="text-right border px-4" style="direction: rtl;">
                     <ul>
@@ -678,7 +713,44 @@
             </div>
 
             <div class="tab-pane fade float-right w-100" id="subject_analysis_pane1" role="tabpanel" aria-labelledby="subject_analysis_tab1">
-                3
+                <!-- statistical doc info segment -->
+                <h6 id="term_count_header">
+                    <label for="doc_info" class="text-right float-right mt-5" style="direction: rtl;;">کلمات کلیدی سند در هر موضوع</label>
+                </h6>
+                <div class="table-responsive">
+                    <table class="table table-hover  caption-top">
+                        <thead class="table">
+                            <tr>
+                                <th class="text-center" scope="col">کلمات کلیدی</th>
+                                <th class="text-center" scope="col"> موضوع</th>
+                                <th class="text-center" scope="col">ردیف</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">اطلاعات - مجازی - داده - رایانه ای - ابری - ارتباطی - هوشمند - اینترنتی - شبکه - رایانه - اینترنت - برخط - الکترونیکی - زیرساخت</td>
+                                <td class="text-center">ارتباطات و فناوری اطلاعات</td>
+                                <td class="text-center">1</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">بانکداری- تقاضا- بودجه- درآمد</td>
+                                <td class="text-center">اقتصادی</td>
+                                <td class="text-center">2</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <h5 id="term_count_header" class="w-100 mt-3 text-right float-right">
+                    توزیع موضوعی سند
+                </h5>
+                <br>
+
+                <div id="barchart_container1" class="bg-light w-100 px-1 p-2 pb-2 p-sm-4 px-sm-4">
+                </div>
+                <script src="js/information/chart_handler1.js">
+                </script>
             </div>
         </div>
 
