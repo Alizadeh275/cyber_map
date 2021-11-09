@@ -103,6 +103,7 @@ a.active:hover {
 thead,
 h6.header {
     background-color: #488fb8;
+    /* background-color: rgb(105, 104, 104); */
     /* background-color: rgb(21, 87, 126); */
 }
 
@@ -118,6 +119,15 @@ th {
     direction: rtl;
     color: white;
     font-weight: normal;
+}
+
+.doc_info_table thead,
+.tf_idf_table thead,
+#Primary_Keywords_header,
+#Final_Keywords_header,
+#First_two_para_header,
+#Last_two_para_header {
+    background-color: rgb(87, 87, 87);
 }
 
 tr a {
